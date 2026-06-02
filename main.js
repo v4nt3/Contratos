@@ -5,6 +5,36 @@ function toggle(header) {
   if (!wasOpen) item.classList.add('open');
 }
 
+// Tooltip positioning — follow cursor
+document.querySelectorAll('.tip').forEach(tip => {
+  tip.addEventListener('mouseenter', (e) => {
+    const pseudo = window.getComputedStyle(tip, '::after');
+  });
+  tip.addEventListener('mousemove', (e) => {
+    tip.style.setProperty('--tx', (e.clientX - 115) + 'px');
+    tip.style.setProperty('--ty', (e.clientY - 90) + 'px');
+  });
+});
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+
+function closeMobileNav() {
+  hamburger.classList.remove('open');
+  mobileNav.classList.remove('open');
+}
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileNav.classList.toggle('open');
+});
+
+// Close on outside click
+document.addEventListener('click', (e) => {
+  if (!hamburger.contains(e.target) && !mobileNav.contains(e.target)) {
+    closeMobileNav();
+  }
+});
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }

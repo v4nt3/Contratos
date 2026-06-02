@@ -26,7 +26,19 @@
     <li><a href="#escrow">Escrow</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
+  <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mobile-nav" id="mobileNav">
+  <a href="#tipos" onclick="closeMobileNav()">📋 Tipos de contratos</a>
+  <a href="#licencia" onclick="closeMobileNav()">📄 Licencia de uso</a>
+  <a href="#desarrollo" onclick="closeMobileNav()">💻 Desarrollo de software</a>
+  <a href="#laboral" onclick="closeMobileNav()">👔 Contrato laboral</a>
+  <a href="#cesion" onclick="closeMobileNav()">🔄 Cesión de derechos</a>
+  <a href="#escrow" onclick="closeMobileNav()">🏦 Escrow y mantenimiento</a>
+  <a href="#faq" onclick="closeMobileNav()">❓ Preguntas frecuentes</a>
+</div>
 
 <!-- HERO -->
 <div class="hero">
@@ -73,10 +85,26 @@
 
 <!-- STATS STRIP -->
 <div class="stats-strip">
-  <div class="stat-item"><div class="stat-num">7</div><div class="stat-label">Tipos de contratos</div></div>
-  <div class="stat-item"><div class="stat-num">5 años</div><div class="stat-label">Duración supletoria de licencias</div></div>
-  <div class="stat-item"><div class="stat-num">20%</div><div class="stat-label">Regalías presuntas en cesión</div></div>
-  <div class="stat-item"><div class="stat-num">Art. 20</div><div class="stat-label">Presunción de transferencia en obra por encargo</div></div>
+  <div class="stat-item">
+    <div class="stat-num">7</div>
+    <div class="stat-label">Tipos de contratos</div>
+    <div class="stat-sub">Desde licencias de uso hasta depósito de código fuente</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">5 años</div>
+    <div class="stat-label">Duración supletoria de licencias</div>
+    <div class="stat-sub">Si el contrato no dice cuánto dura, la ley aplica este plazo por defecto</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">20%</div>
+    <div class="stat-label">Regalías presuntas en cesión</div>
+    <div class="stat-sub">Si no se pactó precio, la ley presume este porcentaje de ganancias para el autor</div>
+  </div>
+  <div class="stat-item">
+    <div class="stat-num">Art. 20</div>
+    <div class="stat-label">Presunción de transferencia</div>
+    <div class="stat-sub">En obra por encargo: quien paga el desarrollo se queda con los derechos económicos</div>
+  </div>
 </div>
 
 <!-- TIPOS -->
@@ -124,7 +152,15 @@
     <h2>Contrato de Licencia de Uso</h2>
     <p class="sec-intro">El titular autoriza a un tercero a usar el programa a cambio de un precio. No transmite propiedad: esta permanece en manos del licenciante. Los programas se protegen como obras literarias.</p>
 
-    <div class="detail-card">
+    <div class="analogy-card">
+      <div class="analogy-ico">🎵</div>
+      <div>
+        <span class="analogy-label">Analogía para entenderlo fácil</span>
+        <p>Imagina que eres músico y compones una canción. Una discográfica quiere usarla en su plataforma. Firman una <strong>licencia de uso</strong>: la discográfica puede reproducir tu canción, pero tú sigues siendo el dueño. Si mañana otra plataforma quiere usarla también y en el contrato no se pactó exclusividad, puedes dársela. Tu canción, tus reglas.</p>
+      </div>
+    </div>
+
+    <div class="detail-card" style="margin-top:2rem;">
       <div class="detail-header">
         <div class="detail-icon">📋</div>
         <div>
@@ -133,10 +169,10 @@
         </div>
       </div>
       <div class="detail-body">
-        <div class="detail-point"><h4 style="color:var(--blue);">Facultades otorgadas</h4><p>Reproducción (la instalación califica; también copias de seguridad) y transformación, limitada a corrección de errores.</p></div>
-        <div class="detail-point"><h4 style="color:var(--teal);">Carácter no exclusivo</h4><p>Salvo pacto expreso, se presume que la licencia es <strong>no exclusiva</strong>. Para exclusividad, debe pactarse explícitamente.</p></div>
-        <div class="detail-point"><h4 style="color:var(--amber);">Alcance restringido</h4><p>Toda autorización se entiende limitada exclusivamente a las formas de explotación acordadas de forma expresa.</p></div>
-        <div class="detail-point"><h4 style="color:var(--coral);">Duración</h4><p>Puede ser determinada o indefinida. En silencio del contrato, se aplica un límite supletorio de <strong>5 años</strong>.</p></div>
+        <div class="detail-point"><h4 style="color:var(--blue);">Facultades otorgadas</h4><p><span class="tip" data-tip="Hacer copias del programa, incluyendo instalarlo en un equipo o guardar copias de respaldo.">Reproducción</span> (la instalación califica; también copias de seguridad) y <span class="tip" data-tip="Modificar el software, por ejemplo corregir errores o adaptarlo.">transformación</span>, limitada a corrección de errores.</p></div>
+        <div class="detail-point"><h4 style="color:var(--teal);">Carácter no exclusivo</h4><p>Salvo <span class="tip" data-tip="Acuerdo expreso = que esté escrito claramente en el contrato, no se puede asumir.">pacto expreso</span>, se presume que la licencia es <strong>no exclusiva</strong>. Para <span class="tip" data-tip="Exclusividad: el titular promete no darle la misma licencia a nadie más mientras dure el contrato.">exclusividad</span>, debe pactarse explícitamente.</p></div>
+        <div class="detail-point"><h4 style="color:var(--amber);">Alcance restringido</h4><p>Toda autorización se entiende limitada exclusivamente a las <span class="tip" data-tip="Formas de explotación: las maneras concretas en que se puede usar la obra (reproducir, distribuir, traducir, etc.).">formas de explotación</span> acordadas de forma expresa.</p></div>
+        <div class="detail-point"><h4 style="color:var(--coral);">Duración</h4><p>Puede ser determinada o indefinida. En <span class="tip" data-tip="Silencio del contrato: cuando el documento no dice nada sobre ese punto.">silencio del contrato</span>, se aplica un límite <span class="tip" data-tip="Supletorio: regla que aplica la ley automáticamente cuando el contrato no lo regula.">supletorio</span> de <strong>5 años</strong>.</p></div>
       </div>
     </div>
 
@@ -220,7 +256,15 @@
 <section id="desarrollo" class="reveal">
   <div class="sec-tag">03 · Obra por encargo</div>
   <h2>Contrato de Desarrollo de Software</h2>
-  <p class="sec-intro">Un proveedor se obliga a elaborar un programa a medida siguiendo especificaciones técnicas y un calendario de hitos, a cambio de un precio. Por ley (Art. 20), los derechos patrimoniales se transfieren al contratante; los morales los conserva el autor.</p>
+  <p class="sec-intro">Un proveedor se obliga a elaborar un programa a medida siguiendo especificaciones técnicas y un calendario de hitos, a cambio de un precio. Por ley (<span class="tip" data-tip="Art. 20: artículo de la Ley de Derecho de Autor que dice que quien encarga y paga el desarrollo se queda con los derechos económicos de lo que se crea.">Art. 20</span>), los <span class="tip" data-tip="Derechos patrimoniales: los derechos que permiten ganar dinero con la obra (venderla, licenciarla, distribuirla). Se distinguen de los derechos morales, que son personales.">derechos patrimoniales</span> se transfieren al contratante; los <span class="tip" data-tip="Derechos morales: el derecho a ser reconocido como autor y a que no distorsionen tu obra. Son permanentes e intransferibles, nadie te los puede quitar.">morales</span> los conserva el autor.</p>
+
+  <div class="analogy-card">
+    <div class="analogy-ico">🏗️</div>
+    <div>
+      <span class="analogy-label">Analogía para entenderlo fácil</span>
+      <p>Es como contratar a un arquitecto para diseñar tu casa. El arquitecto la diseña según tus especificaciones y cuando termina, la casa es tuya. Sin embargo, el arquitecto conserva el derecho de decir "yo diseñé esta casa" (derecho moral de paternidad). Tú no puedes decir que la diseñaste tú.</p>
+    </div>
+  </div>
 
   <div class="detail-card">
     <div class="detail-header">
@@ -271,6 +315,14 @@
     <div class="sec-tag">04 · Contrato laboral</div>
     <h2>Contratación laboral para desarrolladores</h2>
     <p class="sec-intro">Para que exista contrato de trabajo deben concurrir tres elementos. Si se reúnen, la ley presume relación laboral sin importar cómo se denomine el documento.</p>
+
+    <div class="analogy-card">
+      <div class="analogy-ico">👔</div>
+      <div>
+        <span class="analogy-label">Analogía para entenderlo fácil</span>
+        <p>Una empresa te llama "contratista independiente" y te hace firmar un "contrato de servicios". Pero en la práctica: trabajas solo para ellos, en sus horarios, con sus computadores y siguiendo sus instrucciones. Para la ley, eso <strong>es</strong> un contrato laboral, sin importar cómo lo llamen. Esto se conoce como la <span class="tip" data-tip="Primacía de la realidad: la ley mira cómo funciona realmente la relación, no cómo se llama el documento.">primacía de la realidad</span>.</p>
+      </div>
+    </div>
     <div class="labor-grid">
       <div class="labor-card">
         <div class="labor-badge" style="color:#b5d4f4;">01</div>
@@ -325,7 +377,15 @@
 <section id="cesion" class="reveal">
   <div class="sec-tag">05 · Enajenación de derechos</div>
   <h2>Contrato de Cesión (Enajenación)</h2>
-  <p class="sec-intro">Acto jurídico donde el titular transmite sus derechos patrimoniales a un tercero, de forma total o parcial. Los derechos morales nunca se ceden: son inalienables, irrenunciables e imprescriptibles.</p>
+  <p class="sec-intro"><span class="tip" data-tip="Acto jurídico: acción reconocida por la ley que genera derechos y obligaciones entre las partes.">Acto jurídico</span> donde el titular transmite sus <span class="tip" data-tip="Derechos patrimoniales: los que permiten explotar económicamente la obra (venderla, reproducirla, distribuirla). NO incluyen los derechos morales.">derechos patrimoniales</span> a un tercero, de forma total o parcial. Los <span class="tip" data-tip="Derechos morales: reconocimiento de autoría e integridad de la obra. Son para siempre, no se pueden vender ni regalar.">derechos morales</span> nunca se ceden: son <span class="tip" data-tip="Inalienables: no se pueden transferir a otra persona bajo ninguna circunstancia.">inalienables</span>, <span class="tip" data-tip="Irrenunciables: ni el propio autor puede renunciar a ellos, aunque lo quiera.">irrenunciables</span> e <span class="tip" data-tip="Imprescriptibles: no caducan con el tiempo, existen para siempre.">imprescriptibles</span>.</p>
+
+  <div class="analogy-card">
+    <div class="analogy-ico">📸</div>
+    <div>
+      <span class="analogy-label">Analogía para entenderlo fácil</span>
+      <p>Imagina que eres fotógrafo y vendes todos los derechos de una foto a una revista. La revista puede publicarla, venderla o imprimirla en posters. Pero si la revista cambia la foto y la distorsiona de forma ofensiva, tú aún puedes reclamar, porque tu derecho moral de integridad nunca desaparece. La <strong>cesión</strong> es como vender el coche: cambia de dueño, pero el fabricante siempre es el fabricante.</p>
+    </div>
+  </div>
 
   <div class="step-flow">
     <div class="step-item">
@@ -402,6 +462,14 @@
     <div class="sec-tag">06 · Contratos adicionales de software</div>
     <h2>Escrow y Mantenimiento</h2>
     <p class="sec-intro">Dos contratos especializados esenciales para la gestión técnica y la seguridad jurídica a largo plazo en proyectos de software.</p>
+
+    <div class="analogy-card">
+      <div class="analogy-ico">🏦</div>
+      <div>
+        <span class="analogy-label">Analogía para entenderlo fácil</span>
+        <p>El <strong>escrow</strong> funciona como una caja de seguridad en un banco. El proveedor deposita el código fuente en manos de un tercero neutral. Si algún día el proveedor cierra o incumple, el banco te entrega la caja. Mientras todo esté bien, nadie la abre. Es un seguro para que tu negocio no se paralice si algo le pasa a quien desarrolló tu sistema.</p>
+      </div>
+    </div>
     <div class="escrow-grid">
       <div class="escrow-card">
         <div class="escrow-card-icon">🔧</div>
@@ -593,35 +661,45 @@
         <span class="acc-q">¿Puedo ceder mis derechos morales de autor?</span>
         <span class="acc-ico">+</span>
       </div>
-      <div class="acc-body"><p>No. Los derechos morales son inalienables, irrenunciables e imprescriptibles. Aunque firmes un contrato donde aparentemente los cedes, esa cláusula es nula de pleno derecho. Puedes ceder los derechos patrimoniales (explotación económica), pero la paternidad e integridad de la obra siempre permanecen en ti como autor.</p></div>
+      <div class="acc-body"><p>No. Los <span class="tip" data-tip="Derechos morales: el derecho a ser reconocido como autor (paternidad) y a que no distorsionen tu obra (integridad). Son para siempre.">derechos morales</span> son <span class="tip" data-tip="Inalienables: no se pueden transferir. Irrenunciables: ni tú mismo puedes renunciar a ellos. Imprescriptibles: no tienen fecha de vencimiento.">inalienables, irrenunciables e imprescriptibles</span>. Aunque firmes un contrato donde aparentemente los cedes, esa cláusula es nula de pleno derecho. Puedes ceder los <span class="tip" data-tip="Derechos patrimoniales: los que permiten ganar dinero con la obra. Sí se pueden vender o ceder.">derechos patrimoniales</span> (explotación económica), pero la paternidad e integridad de la obra siempre permanecen en ti como autor.
+        <div class="plain-lang"><div class="plain-lang-ico">💬</div><div><span class="plain-lang-label">En palabras simples</span><p>Aunque firmes un papel diciendo que renuncias a ser el autor de tu obra, ese papel no vale. La ley te protege: siempre podrás decir "esto lo hice yo" y nadie puede alterar tu creación sin tu permiso.</p></div></div>
+      </p></div>
     </div>
     <div class="acc-item">
       <div class="acc-header" onclick="toggle(this)">
         <span class="acc-q">Si desarrollé software para un cliente como freelance, ¿de quién son los derechos?</span>
         <span class="acc-ico">+</span>
       </div>
-      <div class="acc-body"><p>Depende del tipo de contrato. En un contrato de obra por encargo, por el Art. 20, se presume que los derechos patrimoniales se transfieren al cliente que encargó la obra. Sin embargo, si no hubo contrato escrito o la relación tiene características laborales (subordinación, horario fijo, herramientas del cliente), podría presumirse contrato laboral y los derechos serían del empleador.</p></div>
+      <div class="acc-body"><p>Depende del tipo de contrato. En un <span class="tip" data-tip="Contrato de obra por encargo: acuerdo donde alguien paga para que otro cree algo específico.">contrato de obra por encargo</span>, por el Art. 20, se presume que los derechos patrimoniales se transfieren al cliente que encargó la obra. Sin embargo, si no hubo contrato escrito o la relación tiene características laborales (subordinación, horario fijo, herramientas del cliente), podría presumirse contrato laboral y los derechos serían del empleador.
+        <div class="plain-lang"><div class="plain-lang-ico">💬</div><div><span class="plain-lang-label">En palabras simples</span><p>Si te pagaron para hacer el software con instrucciones claras de lo que querían, probablemente los derechos son del cliente. Pero si además de pagarte te controlaban los horarios y te daban los equipos, la ley puede considerarte empleado, y también en ese caso los derechos económicos son de quien te contrató. En ambos casos, <strong>tú conservas el derecho de decir que lo hiciste tú</strong>.</p></div></div>
+      </p></div>
     </div>
     <div class="acc-item">
       <div class="acc-header" onclick="toggle(this)">
         <span class="acc-q">¿Qué diferencia hay entre una licencia exclusiva y una no exclusiva?</span>
         <span class="acc-ico">+</span>
       </div>
-      <div class="acc-body"><p>En la licencia no exclusiva, el titular puede otorgar la misma autorización a múltiples licenciatarios simultáneamente. En la exclusiva, el titular se compromete a no otorgar la misma autorización a terceros durante la vigencia del contrato, y habitualmente tampoco puede usar la obra de esa forma él mismo. La exclusividad debe pactarse expresamente; en ausencia de acuerdo, la licencia se presume no exclusiva.</p></div>
+      <div class="acc-body"><p>En la <span class="tip" data-tip="Licencia no exclusiva: el dueño puede dársela a varias personas al mismo tiempo.">licencia no exclusiva</span>, el titular puede otorgar la misma autorización a múltiples <span class="tip" data-tip="Licenciatario: la persona o empresa que recibe el permiso de usar la obra.">licenciatarios</span> simultáneamente. En la <span class="tip" data-tip="Licencia exclusiva: el dueño promete no dársela a nadie más mientras dure el contrato.">exclusiva</span>, el titular se compromete a no otorgar la misma autorización a terceros durante la vigencia del contrato, y habitualmente tampoco puede usar la obra de esa forma él mismo. La exclusividad debe pactarse expresamente; en ausencia de acuerdo, la licencia se presume no exclusiva.
+        <div class="plain-lang"><div class="plain-lang-ico">💬</div><div><span class="plain-lang-label">En palabras simples</span><p>Si una app de streaming compra una licencia no exclusiva de tu canción, Spotify, Apple Music y quien quieras también pueden tenerla. Si compra una licencia exclusiva, solo ellos pueden usarla. Si el contrato no dice nada al respecto, se asume que <strong>no es exclusiva</strong>.</p></div></div>
+      </p></div>
     </div>
     <div class="acc-item">
       <div class="acc-header" onclick="toggle(this)">
         <span class="acc-q">¿Puedo hacer ingeniería inversa a un software que compré?</span>
         <span class="acc-ico">+</span>
       </div>
-      <div class="acc-body"><p>En general, no. La mayoría de licencias lo prohíben expresamente. La ley prevé una excepción únicamente para fines de interoperabilidad con otros programas creados de forma independiente, y siempre de buena fe con propósito técnico legítimo. Hacerlo fuera de ese supuesto puede acarrear pérdida de garantía, sanciones contractuales e indemnizaciones.</p></div>
+      <div class="acc-body"><p>En general, no. La mayoría de licencias lo prohíben expresamente. La ley prevé una excepción únicamente para fines de <span class="tip" data-tip="Interoperabilidad: lograr que dos programas independientes funcionen juntos o se comuniquen entre sí.">interoperabilidad</span> con otros programas creados de forma independiente, y siempre de buena fe con propósito técnico legítimo. Hacerlo fuera de ese supuesto puede acarrear pérdida de garantía, sanciones contractuales e indemnizaciones.
+        <div class="plain-lang"><div class="plain-lang-ico">💬</div><div><span class="plain-lang-label">En palabras simples</span><p>Comprar un software no te da derecho a "abrirlo" para ver cómo funciona por dentro. La única excepción es si necesitas hacerlo para que ese programa se conecte con otro que tú mismo creaste. Fuera de ese caso, podrías perder la garantía y hasta enfrentar demandas.</p></div></div>
+      </p></div>
     </div>
     <div class="acc-item">
       <div class="acc-header" onclick="toggle(this)">
         <span class="acc-q">¿Para qué sirve el contrato de Escrow si ya tengo el código instalado?</span>
         <span class="acc-ico">+</span>
       </div>
-      <div class="acc-body"><p>Tener el software instalado no es lo mismo que tener acceso al código fuente. Sin el código fuente, si el proveedor quiebra, deja de operar o es adquirido, no puedes mantener, corregir ni actualizar el sistema. El escrow garantiza que ante esos "eventos gatillo", recibirás el código fuente y podrás continuar operando el sistema de forma independiente.</p></div>
+      <div class="acc-body"><p>Tener el software instalado no es lo mismo que tener acceso al <span class="tip" data-tip="Código fuente: las instrucciones escritas por el programador, en lenguaje legible por humanos. Sin él, no puedes modificar ni mantener el software.">código fuente</span>. Sin el código fuente, si el proveedor quiebra, deja de operar o es adquirido, no puedes mantener, corregir ni actualizar el sistema. El <span class="tip" data-tip="Escrow: acuerdo donde una entidad neutral guarda algo valioso (en este caso el código) y lo entrega solo si ocurre un evento específico.">escrow</span> garantiza que ante esos "eventos gatillo", recibirás el código fuente y podrás continuar operando el sistema de forma independiente.
+        <div class="plain-lang"><div class="plain-lang-ico">💬</div><div><span class="plain-lang-label">En palabras simples</span><p>Es como tener el carro de tu empresa pero no el manual de reparación. Si el mecánico que lo conoce desaparece, no puedes arreglarlo. El escrow es como guardar ese manual en una caja en el banco: si algo le pasa al mecánico, el banco te entrega la caja y puedes contratar a otro.</p></div></div>
+      </p></div>
     </div>
   </div>
 </section>
@@ -630,7 +708,7 @@
 <footer>
   <div class="brand">Lex<span>Soft</span> · Guía de Contratos</div>
   <p>Esta guía tiene carácter académico e informativo. Para casos concretos, consulte a un profesional del derecho.</p>
-  <p>Propiedad Intelectual &amp; Software © 2025</p>
+  <p>Propiedad Intelectual &amp; Software © 2026</p>
 </footer>
 
 <script src="main.js"></script>
